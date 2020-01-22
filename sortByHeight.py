@@ -23,9 +23,27 @@
 
 
 def sortByHeight(a):
-    answer = a
+    treeLocations = []
+    personLocations = []
+    personHeight = []
+    answer = []
+    for idx, element in enumerate(a):
+        if element == -1:
+            treeLocations.append(idx)
+        else:
+            personLocations.append(idx)
+            personHeight.append(element)
+
+    personHeight.sort()
+    personPos = 0
+    for i in range(len(a)):
+        if i in personLocations:
+            answer.append(personHeight[personPos])
+            personPos += 1
+        else:
+            answer.append(-1)
     return answer
 
 
 data = [-1, 150, 190, 170, -1, -1, 160, 180]
-sortByHeight(data)
+print(sortByHeight(data))
