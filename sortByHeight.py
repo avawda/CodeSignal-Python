@@ -24,24 +24,22 @@
 
 def sortByHeight(a):
     treeLocations = []
-    personLocations = []
     personHeight = []
     answer = []
     for idx, element in enumerate(a):
         if element == -1:
             treeLocations.append(idx)
         else:
-            personLocations.append(idx)
             personHeight.append(element)
 
     personHeight.sort()
     personPos = 0
     for i in range(len(a)):
-        if i in personLocations:
+        if i in treeLocations:
+            answer.append(-1)
+        else:
             answer.append(personHeight[personPos])
             personPos += 1
-        else:
-            answer.append(-1)
     return answer
 
 
