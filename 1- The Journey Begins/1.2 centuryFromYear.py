@@ -33,5 +33,12 @@ def centuryFromYear(year):
     return answer
 
 
+# ************************
+# *** Optimal Solution ***
+# ************************
+# def centuryFromYear(year):
+#     return (year + 99) // 100
+
+
 data = 1905
 print(centuryFromYear(data))
