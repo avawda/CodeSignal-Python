@@ -28,11 +28,11 @@
 
 def adjacentElementsProduct(inputArray):
     # Set the benchmark
-    maxProd = inputArray[0]*inputArray[1]
+    maxProd = inputArray[0] * inputArray[1]
 
     # We now traverse the remainder of the array
-    for i in range(1, len(inputArray)-1):
-        prod = inputArray[i]*inputArray[i+1]
+    for i in range(1, len(inputArray) - 1):
+        prod = inputArray[i] * inputArray[i + 1]
         if prod > maxProd:
             maxProd = prod
 
