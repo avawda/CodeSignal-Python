@@ -1,1 +1,0 @@
-Scratchpad for Code Signal website
