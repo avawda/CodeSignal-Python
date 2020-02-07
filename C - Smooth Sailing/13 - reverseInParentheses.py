@@ -22,7 +22,7 @@
 
 #     [input] string inputString
 
-#     A string consisting of lowercase English letters and the characters ( and ). 
+#     A string consisting of lowercase English letters and the characters ( and ).
 #     It is guaranteed that all parentheses in inputString form a regular bracket sequence.
 
 #     Guaranteed constraints:
@@ -31,4 +31,19 @@
 #     [output] string
 #         Return inputString, with all the characters that were in parentheses reversed.
 
+
 def reverseInParentheses(inputString):
+    # Recursive end condition
+    if "(" not in inputString:
+        return inputString
+
+    leftPar = inputString.find("(")
+    rightPar = inputString.find(")")
+    output = inputString[leftPar + 1:rightPar]
+    output = output[::-1]
+    return reverseInParentheses(output)
+
+
+testData = "(bar)"
+testData = "bar"
+print(reverseInParentheses(testData))
