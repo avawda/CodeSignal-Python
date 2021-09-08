@@ -44,7 +44,15 @@ def makeArrayConsecutive2(statues):
 
     return missing
 
+def makeNew(statues):
+    newNeeded = 0
+    statues.sort()
+    for i in range(len(statues)-1):
+        newNeeded = newNeeded + statues[i+1] - statues[i] - 1
+        
+    return newNeeded
 
 testData = [6, 2, 3, 8]
 
-print(makeArrayConsecutive2(testData))
+print(makeNew(testData))
+# print(makeArrayConsecutive2(testData))
